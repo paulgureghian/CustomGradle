@@ -1,4 +1,4 @@
-package com.example.customgradlelibrary;
+package com.example.jokesdisplaylibrary;
 
 import org.junit.Test;
 
