@@ -6,4 +6,5 @@ tasks.withType(JavaCompile) {
 }
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+
 }
