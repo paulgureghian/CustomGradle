@@ -24,6 +24,15 @@
         android:background="#9C27B0"
         android:onClick="tellJoke"/>
 
+    <TextView
+        android:id="@+id/text_view"
+        android:text="joke"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
         android:layout_width="wrap_content"

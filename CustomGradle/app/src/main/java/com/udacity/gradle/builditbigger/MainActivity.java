@@ -7,7 +7,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
-import com.example.jokesdisplaylibrary.ImageActivity;
+
+import com.example.jokesdisplaylibrary.JokesDisplay;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -41,7 +42,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void launchLibraryActivity(View view) {
-        Intent intent = new Intent(this, ImageActivity.class);
+        Intent intent = new Intent(this, JokesDisplay.class);
         startActivity(intent);
     }
 }
