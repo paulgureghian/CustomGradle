@@ -3,7 +3,7 @@
   <component name="FacetManager">
     <facet type="app-engine-gradle" name="App Engine Gradle">
       <configuration>
-        <option name="HTTP_ADDRESS" value="localhost" />
+        <option name="HTTP_ADDRESS" value="0.0.0.0" />
         <option name="HTTP_PORT" value="8080" />
         <option name="WAR_DIR" value="C:\Users\Paul\AndroidStudioProjects\CustomGradle\CustomGradle\gce backend\build\exploded-app" />
         <option name="WEB_APP_DIR" value="C:\Users\Paul\AndroidStudioProjects\CustomGradle\CustomGradle\gce backend\src\main\webapp" />
@@ -41,10 +41,10 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="jokessupplylibrary" exported="" />
-    <orderEntry type="library" exported="" name="C__Users_Paul__gradle_caches_modules_2_files_2_1_com_google_appengine_appengine_endpoints_1_9_38_3d4b8fffc9226618cd69505a4fbeff7a95f449cb_appengine_endpoints_1_9_38_jar" level="project" />
-    <orderEntry type="library" exported="" name="C__Users_Paul__gradle_caches_modules_2_files_2_1_com_google_appengine_appengine_endpoints_deps_1_9_38_79bf14e4517030fb72d6eb2ffbdb6954403485dc_appengine_endpoints_deps_1_9_38_jar" level="project" />
-    <orderEntry type="library" exported="" name="C__Users_Paul__gradle_caches_modules_2_files_2_1_javax_servlet_servlet_api_2_5_5959582d97d8b61f4d154ca9e495aafd16726e34_servlet_api_2_5_jar" level="project" />
-    <orderEntry type="library" exported="" name="C__Users_Paul__gradle_caches_modules_2_files_2_1_com_google_appengine_appengine_api_1_0_sdk_1_9_38_c4e743d675b9a1883023835b7d4fe1d2a72fb7d6_appengine_api_1_0_sdk_1_9_38_jar" level="project" />
+    <orderEntry type="library" exported="" name="appengine-endpoints-1.9.38" level="project" />
+    <orderEntry type="library" exported="" name="appengine-endpoints-deps-1.9.38" level="project" />
+    <orderEntry type="library" exported="" name="servlet-api-2.5" level="project" />
+    <orderEntry type="library" exported="" name="appengine-api-1.0-sdk-1.9.38" level="project" />
     <orderEntry type="library" exported="" name="gce backend.gce backend-android-endpoints" level="project" />
   </component>
 </module>
