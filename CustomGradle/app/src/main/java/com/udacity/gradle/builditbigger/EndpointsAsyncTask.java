@@ -22,15 +22,10 @@ public class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, S
     protected String doInBackground(Pair<Context, String>... params) {
 
         if (myApiService == null) {
-            MyApi.Builder builder = new MyApi.Builder(AndroidHttp.newCompatibleTransport(),
-                    new AndroidJsonFactory(), null)
-                    .setRootUrl("http://10.0.2.2:8080/_ah/api")
-                    .setGoogleClientRequestInitializer(new GoogleClientRequestInitializer() {
-                        @Override
-                        public void initialize(AbstractGoogleClientRequest<?> abstractGoogleClientRequest) throws IOException {
-                            abstractGoogleClientRequest.setDisableGZipContent(true);
-                        }
-                    });
+
+            MyApi.Builder builder = new MyApi.Builder(AndroidHttp.newCompatibleTransport(), new AndroidJsonFactory(), null)
+                    .setRootUrl("https://customgradle.appspot.com/_ah/api");
+
             myApiService = builder.build();
         }
         context = params[0].first;
@@ -43,7 +38,6 @@ public class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, S
             return e.getMessage();
         }
     }
-
     @Override
     protected void onPostExecute(String result) {
         Toast.makeText(context, result, Toast.LENGTH_LONG).show();
