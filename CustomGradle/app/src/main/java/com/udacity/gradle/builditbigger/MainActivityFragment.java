@@ -21,9 +21,6 @@ public class MainActivityFragment extends Fragment {
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_main, container, false);
 
-        TextView textView = (TextView) root.findViewById(R.id.text_view);
-        JokesSupply jokesSupply = new JokesSupply();
-        textView.setText(jokesSupply.getJoke());
         AdView mAdView = (AdView) root.findViewById(R.id.adView);
 
         AdRequest adRequest = new AdRequest.Builder()

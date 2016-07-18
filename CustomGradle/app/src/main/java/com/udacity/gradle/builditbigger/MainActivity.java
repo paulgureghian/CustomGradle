@@ -23,9 +23,6 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         new EndpointsAsyncTask().execute(new Pair<Context, String>(this, "Testing EndPointsAsyncTask"));
-
-
-
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -47,7 +44,7 @@ public class MainActivity extends ActionBarActivity {
         Toast.makeText(this, "derp", Toast.LENGTH_SHORT).show();
     }
 
-    public void launchLibraryActivity(View view) {
+    public void launchJoke(View view) {
         Intent intent = new Intent(this, JokesDisplay.class);
         startActivity(intent);
     }
