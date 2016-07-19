@@ -4,9 +4,12 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.widget.Toast;
 
+import com.example.JokesSupply;
 import com.example.paul.myapplication.backend.myApi.MyApi;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
+
+import org.greenrobot.eventbus.EventBus;
 
 import java.io.IOException;
 
@@ -37,5 +40,11 @@ public class EndpointsAsyncTask extends AsyncTask<Context, Void, String> {
     @Override
     protected void onPostExecute(String result) {
         Toast.makeText(context, result, Toast.LENGTH_LONG).show();
+
+        EventBus.getDefault().post(new MessageEvent(result));
     }
 }
+
+
+
+
