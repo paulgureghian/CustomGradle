@@ -27,9 +27,11 @@ public class MainActivity extends ActionBarActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setIcon(R.mipmap.ic_launcher);
         setContentView(R.layout.activity_main);
+        mContext = this;
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+
 
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
@@ -47,10 +49,12 @@ public class MainActivity extends ActionBarActivity {
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEvent(MessageEvent event) {
 
+
+       String joke = event.getMessage();
         Intent intent = new Intent(this, JokesDisplay.class);
-        intent.putExtra(EventBus.getDefault());
+        intent.putExtra("joke", joke);
         startActivity(intent);
-        event.getMessage();
+
     };
     @Override
     public void onStart() {
