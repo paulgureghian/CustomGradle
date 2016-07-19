@@ -8,20 +8,22 @@ import com.example.JokesSupply;
 
 public class JokesDisplay extends AppCompatActivity {
 
+    TextView display;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jokes_display);
 
+        display = (TextView) findViewById(R.id.display);
+
+        getIntent().getStringExtra("joke");
+
         JokesSupply jokesSupply = new JokesSupply();
-
-    //    textView.setText(jokesSupply.getJoke());
-        TextView textView = (TextView) findViewById(R.id.display);
     }
-
     public String getJoke() {
 
         JokesSupply jokesSupply = new JokesSupply();
-        return  jokesSupply.getJoke();
+        return jokesSupply.getJoke();
     }
 }
