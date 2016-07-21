@@ -4,6 +4,7 @@ android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
     defaultConfig {
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         applicationId "com.udacity.gradle.builditbigger"
         minSdkVersion 19
         targetSdkVersion 23
@@ -37,6 +38,9 @@ android {
 }
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile 'com.android.support:support-annotations:23.4.0'
+    androidTestCompile 'com.android.support.test:runner:0.5'
+    androidTestCompile 'com.android.support.test:rules:0.5'
     compile 'com.android.support:multidex:1.0.1'
     compile 'com.android.support:appcompat-v7:23.4.0'
     compile 'com.google.android.gms:play-services-auth:8.4.0'
@@ -45,5 +49,5 @@ dependencies {
     freeCompile 'com.google.android.gms:play-services-ads:8.4.0'
     compile project(path: ':gce backend', configuration: 'android-endpoints')
     compile project(':jokesdisplaylibrary')
-
+    testCompile 'junit:junit:4.12'
 }
