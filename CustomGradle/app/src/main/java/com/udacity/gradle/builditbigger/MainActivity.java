@@ -32,7 +32,6 @@ public class MainActivity extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
-
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
@@ -49,12 +48,10 @@ public class MainActivity extends ActionBarActivity {
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEvent(MessageEvent event) {
 
-
        String joke = event.getMessage();
         Intent intent = new Intent(this, JokesDisplay.class);
         intent.putExtra("joke", joke);
         startActivity(intent);
-
     };
     @Override
     public void onStart() {
@@ -70,6 +67,5 @@ public class MainActivity extends ActionBarActivity {
 
         EndpointsAsyncTask task = new EndpointsAsyncTask();
         task.execute(mContext);
-
     }
 }
