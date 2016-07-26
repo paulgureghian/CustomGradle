@@ -26,13 +26,8 @@ public class EndpointsAsyncTask extends AsyncTask<Context, Void, String> {
         if (myApiService == null) {
 
             MyApi.Builder builder = new MyApi.Builder(AndroidHttp.newCompatibleTransport(), new AndroidJsonFactory(), null)
-                    .setRootUrl("http://10.0.0.3:8080/_ah/api")
-                    .setGoogleClientRequestInitializer(new GoogleClientRequestInitializer() {
-                        @Override
-                        public void initialize(AbstractGoogleClientRequest<?> abstractGoogleClientRequest) throws IOException {
-                            abstractGoogleClientRequest.setDisableGZipContent(true);
-                        }
-                    });
+                    .setRootUrl("https://customgradle.appspot.com/_ah/api/");
+
             myApiService = builder.build();
         }
         try {
