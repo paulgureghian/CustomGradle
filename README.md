@@ -9,4 +9,6 @@ This app implements Java and Android libraries, Google Cloud Endpoint, and a dep
 
 A Google Cloud Endpoint module is deployed to a back-end app engine implemented for fetching data from the Java library which passes it to the app module which passes the data to a dependent Android module, where it is displayed in the UI. 
  
+Google play services-ads is also implemented in the free debug variant.  
+  
 Finally an AsyncTask class file is implemented to make the query to the endpoint on a worker thread instead of the main thread. an AsyncTask test class is also included to test the AsyncTask class fucntionality. 
